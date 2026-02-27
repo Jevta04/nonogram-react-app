@@ -23,36 +23,34 @@ export function useNonogram() {
         }
     }, [grid])
 
-    function handleCellClick(row, col) {
-        if (isWon) return
+    function handleMouseDown(row, col) {
+        isDragging.current = true
+        dragMode.current = mode
+
+        // prvi klik uvijek toggle-uje normalno
         setGrid(prevGrid => {
             const newGrid = prevGrid.map(r => [...r])
             const current = newGrid[row][col]
-    // preskacemo tokom draga sa X modom filled celije i obrnuto
-            if (isDragging.current) {
-                if (dragMode.current === 1 && current === 2) return newGrid
-                if (dragMode.current === 2 && current === 1) return newGrid
-                if (current !== dragMode.current) {
-                    newGrid[row][col] = dragMode.current
-                }
-            } else {
-                newGrid[row][col] = current === mode ? 0 : mode
-            }
-
+            newGrid[row][col] = current === mode ? 0 : mode
             return autoFill(newGrid, currentLevel.solution)
         })
     }
 
-    function handleMouseDown(row, col) {
-        isDragging.current = true
-        dragMode.current = mode
-        handleCellClick(row, col)
-    }
-
     function handleMouseEnter(row, col) {
-        if (isDragging.current) {
-            handleCellClick(row, col)
-        }
+        if (!isDragging.current) return
+
+        setGrid(prevGrid => {
+            const newGrid = prevGrid.map(r => [...r])
+            const current = newGrid[row][col]
+
+            if (dragMode.current === 1 && current === 2) return newGrid
+            if (dragMode.current === 2 && current === 1) return newGrid
+            if (current !== dragMode.current) {
+                newGrid[row][col] = dragMode.current
+            }
+
+            return autoFill(newGrid, currentLevel.solution)
+        })
     }
 
     function handleMouseUp() {
@@ -90,7 +88,6 @@ export function useNonogram() {
         currentLevelIndex,
         mode,
         isWon,
-        handleCellClick,
         handleMouseDown,
         handleMouseEnter,
         handleMouseUp,
