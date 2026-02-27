@@ -1,0 +1,46 @@
+.toolbar {
+    display: flex;
+    justify-content: center;
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #dfe6e9;
+    border-radius: 50px;
+    padding: 4px;
+    cursor: pointer;
+    width: 120px;
+    height: 48px;
+    user-select: none;
+}
+
+.toggle__slider {
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    background-color: #3498db;
+    border-radius: 46px;
+    transition: transform 0.25s ease;
+    transform: translateX(0px);
+}
+
+.toggle__slider--right {
+    transform: translateX(58px);
+}
+
+.toggle__label {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color: #b2bec3;
+    transition: color 0.25s ease;
+}
+
+.toggle__label--active {
+    color: #ffffff;
+}

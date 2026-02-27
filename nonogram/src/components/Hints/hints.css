@@ -1,0 +1,39 @@
+/* hints.css */
+.col-hints {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.col-hints__item {
+    width: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 6px;
+    gap: 2px;
+}
+
+.row-hints {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.row-hints__item {
+    height: 52px;
+    width: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    gap: 4px;
+}
+
+.hint {
+    font-size: 14px;
+    font-weight: 700;
+    color: #636e72;
+}

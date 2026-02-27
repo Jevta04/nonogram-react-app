@@ -1,0 +1,63 @@
+.board {
+    display: flex;
+    flex-direction: column;
+}
+
+.board__row {
+    display: flex;
+}
+
+.cell {
+    width: 52px;
+    height: 52px;
+    background-color: #ffffff;
+    border: 1px solid #dfe6e9;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.cell:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.cell:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.board__row:first-child .cell {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.board__row:last-child .cell {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.cell:hover {
+    background-color: #f0f4f8;
+}
+
+.cell--filled {
+    background-color: #3498db;
+    border-color: #2980b9;
+}
+
+.cell--crossed {
+    background-color: #f0f4f8;
+    position: relative;
+}
+
+.cell--crossed::after {
+    content: 'X';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: #b2bec3;
+}
+
+.cell--won {
+    transition: background-color 0.4s ease;
+}

@@ -1,1 +1,69 @@
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
 
+.app__game {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__top {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.app__corner {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.app__win {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.app__win-message {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.app__win-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.win-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #dfe6e9;
+    color: #636e72;
+    transition: all 0.15s ease;
+}
+
+.win-btn:hover {
+    background-color: #b2bec3;
+}
+
+.win-btn--primary {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.win-btn--primary:hover {
+    background-color: #2980b9;
+}
