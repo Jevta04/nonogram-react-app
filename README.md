@@ -4,8 +4,8 @@ A nonogram puzzle game built with React and Vanilla JS. Solve logic puzzles and 
 
 ## Screenshots
 
-![Gameplay](screenshots/gameplay.png)
-![Win Screen](screenshots/win.png)
+![Gameplay](nonogram/screenshots/gameplay.png)
+![Win Screen](nonogram/screenshots/win.png)
 
 ## What is a Nonogram?
 
