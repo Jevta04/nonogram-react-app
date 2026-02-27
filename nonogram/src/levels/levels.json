@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Srce",
+    "solution": [
+      [0, 1, 0, 1, 0],
+      [1, 1, 1, 1, 1],
+      [1, 1, 1, 1, 1],
+      [0, 1, 1, 1, 0],
+      [0, 0, 1, 0, 0]
+    ],
+    "colors": [
+      [null, "#e74c3c", null, "#e74c3c", null],
+      ["#e74c3c", "#e74c3c", "#e74c3c", "#e74c3c", "#e74c3c"],
+      ["#e74c3c", "#e74c3c", "#e74c3c", "#e74c3c", "#e74c3c"],
+      [null, "#e74c3c", "#e74c3c", "#e74c3c", null],
+      [null, null, "#e74c3c", null, null]
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Kuca",
+    "solution": [
+      [0, 0, 1, 0, 0],
+      [0, 1, 1, 1, 0],
+      [1, 1, 1, 1, 1],
+      [0, 1, 0, 1, 0],
+      [0, 1, 0, 1, 0]
+    ],
+    "colors": [
+      [null, null, "#e67e22", null, null],
+      [null, "#e67e22", "#e67e22", "#e67e22", null],
+      ["#7f8c8d", "#7f8c8d", "#7f8c8d", "#7f8c8d", "#7f8c8d"],
+      [null, "#3498db", null, "#3498db", null],
+      [null, "#3498db", null, "#3498db", null]
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sunce",
+    "solution": [
+      [1, 0, 1, 0, 1],
+      [0, 1, 1, 1, 0],
+      [1, 1, 1, 1, 1],
+      [0, 1, 1, 1, 0],
+      [1, 0, 1, 0, 1]
+    ],
+    "colors": [
+      ["#f1c40f", null, "#f1c40f", null, "#f1c40f"],
+      [null, "#f39c12", "#f39c12", "#f39c12", null],
+      ["#f1c40f", "#f39c12", "#f1c40f", "#f39c12", "#f1c40f"],
+      [null, "#f39c12", "#f39c12", "#f39c12", null],
+      ["#f1c40f", null, "#f1c40f", null, "#f1c40f"]
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Riba",
+    "solution": [
+      [1, 0, 0, 0, 1],
+      [0, 1, 0, 1, 1],
+      [0, 1, 1, 1, 1],
+      [0, 1, 0, 1, 1],
+      [1, 0, 0, 0, 1]
+    ],
+    "colors": [
+      ["#1abc9c", null, null, null, "#1abc9c"],
+      [null, "#16a085", null, "#1abc9c", "#1abc9c"],
+      [null, "#16a085", "#16a085", "#1abc9c", "#1abc9c"],
+      [null, "#16a085", null, "#1abc9c", "#1abc9c"],
+      ["#1abc9c", null, null, null, "#1abc9c"]
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dijamant",
+    "solution": [
+      [0, 0, 1, 0, 0],
+      [0, 1, 1, 1, 0],
+      [1, 1, 0, 1, 1],
+      [0, 1, 1, 1, 0],
+      [0, 0, 1, 0, 0]
+    ],
+    "colors": [
+      [null, null, "#9b59b6", null, null],
+      [null, "#8e44ad", "#a569bd", "#8e44ad", null],
+      ["#6c3483", "#8e44ad", null, "#8e44ad", "#6c3483"],
+      [null, "#8e44ad", "#a569bd", "#8e44ad", null],
+      [null, null, "#9b59b6", null, null]
+    ]
+  }
+]
