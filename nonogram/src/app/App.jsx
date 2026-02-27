@@ -9,7 +9,6 @@ export default function App() {
     const {
         grid,
         currentLevel,
-        currentLevelIndex,
         mode,
         isWon,
         handleCellClick,
@@ -21,6 +20,7 @@ export default function App() {
 
     return (
         <div className="app">
+            <h1 className="title">Nonogram: Level #{currentLevel.id}</h1>
             <div className="app__game">
                 <div className="app__top">
                     <div className="app__corner" />
@@ -39,7 +39,7 @@ export default function App() {
 
             {isWon ? (
                 <div className="app__win">
-                    <p className="app__win-message">Pobijedio si! 🎉</p>
+                    <p className="app__win-message">YOU WON! 🎉</p>
                     <div className="app__win-buttons">
                         <button className="win-btn" onClick={prevLevel}>← Prev</button>
                         <button className="win-btn" onClick={resetGame}>Retry</button>

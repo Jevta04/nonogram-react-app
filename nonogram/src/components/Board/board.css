@@ -42,7 +42,10 @@
     background-color: #3498db;
     border-color: #2980b9;
 }
-
+.cell--filled:hover {
+    background-color: #2980b9;
+    border-color: #2471a3;
+}
 .cell--crossed {
     background-color: #f0f4f8;
     position: relative;
