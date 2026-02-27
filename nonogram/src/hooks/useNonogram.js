@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import levels from '../levels/levels.json'
 import { checkWin } from '../logic/checkWin.js'
 
@@ -12,6 +12,7 @@ export function useNonogram() {
     const [grid, setGrid] = useState(() => createEmptyGrid(5))
     const [mode, setMode] = useState(1)
     const [isWon, setIsWon] = useState(false)
+    const isDragging = useRef(false)
 
     useEffect(() => {
         if (checkWin(grid, currentLevel.solution)) {
@@ -27,6 +28,21 @@ export function useNonogram() {
             newGrid[row][col] = current === mode ? 0 : mode
             return newGrid
         })
+    }
+
+    function handleMouseDown(row, col) {
+        isDragging.current = true
+        handleCellClick(row, col)
+    }
+
+    function handleMouseEnter(row, col) {
+        if (isDragging.current) {
+            handleCellClick(row, col)
+        }
+    }
+
+    function handleMouseUp() {
+        isDragging.current = false
     }
 
     function toggleMode() {
@@ -61,6 +77,9 @@ export function useNonogram() {
         mode,
         isWon,
         handleCellClick,
+        handleMouseDown,
+        handleMouseEnter,
+        handleMouseUp,
         toggleMode,
         resetGame,
         nextLevel,

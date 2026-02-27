@@ -11,7 +11,9 @@ export default function App() {
         currentLevel,
         mode,
         isWon,
-        handleCellClick,
+        handleMouseDown,
+        handleMouseEnter,
+        handleMouseUp,
         toggleMode,
         resetGame,
         nextLevel,
@@ -32,7 +34,9 @@ export default function App() {
                         grid={grid}
                         colors={currentLevel.colors}
                         isWon={isWon}
-                        onCellClick={handleCellClick}
+                        onMouseDown={handleMouseDown}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseUp={handleMouseUp}
                     />
                 </div>
             </div>
